@@ -16,7 +16,6 @@ body{
     align-items: center;
     flex-direction: column;
     padding: 40px;
-    display: none;
 }
 .container h1{
     font-size: 12vh;
@@ -31,7 +30,7 @@ body{
 }
 .prompt-area{
     background: #434a58;
-    height: 70px;
+    height: 100px;
     position: fixed;
     bottom: 40px;
     width: 100%;
@@ -68,7 +67,7 @@ body{
 }
 .chatContainer{
     width: 100%;
-    max-height: 100vh;
+    max-height:calc(100vh-100px);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -96,6 +95,6 @@ body{
     color: rgba(255, 255, 255, 0.817);
 }
 .img{
-    height: 10%;
-    width: 100px;
+    height: 1px;
+    width: 80px;
 }

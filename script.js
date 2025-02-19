@@ -10,10 +10,27 @@ function createchat(html,classname){
     return div;
 }
 async function  getapiResponse(aibox) {
+     let text=aibox.querySelector(".text");
     try{
+   let response=await  fetch(Api_url,{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+        contents: [{
+            "role":"user",
+            "parts":[{text: userMessage}]
+            }]
+    })
+   })
+   let data=await response.json();
+   let apirequest=data?.candidates[0].content.parts[0].text;
+   text.innerText=apirequest;
+    }catch(error){
+        console.log(error);
 
-    }catch{
-
+    }
+    finally{
+       aibox.querySelector(".loading").style.display="none";
     }
     
 }
@@ -27,7 +44,6 @@ function showloading(){
             <img class="loading" src="load.gif" width="50">
         </div>`;
         let aibox= createchat(html,"chatbot"); 
-        // aibox.querySelector(".text").innerText;
         chatContainer.appendChild(aibox);
         getapiResponse(aibox);
     
