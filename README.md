@@ -14,7 +14,7 @@ An AI-powered chatbot that interacts with users using natural language processin
 - HTML
 - CSS
 - JavaScript
-- AI API (if applicable)
+- AI API 
 
 ## How to Use
 1. Open the chatbot application.
