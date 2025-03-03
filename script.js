@@ -52,28 +52,6 @@ function showloading() {
     getapiResponse(aibox);
 }
 
-// btn.addEventListener('click',()=>{
-//     console.log("button");
-//     if(userMessage==""){
-//         container.style.display="flex";
-//     }else {
-//         container.style.display="none";
-
-//     }
-//     userMessage=prompt.value;
-//     if(!userMessage)return;
-//     let html=` <div class="user">
-//     <div class="img">
-//             <img src="icons.png" width="30">
-//             </div>
-//             <p class="text"></p>
-//         </div>`
-//      let userbox= createchat(html,"user");  
-//      userbox.querySelector(".text").innerText =userMessage;
-//      chatContainer.appendChild(userbox);
-//      prompt.value="";
-//     setTimeout(showloading,500);
-// })
 btn.addEventListener("click", () => {
     userMessage = prompt.value.trim();
      container.style.display = "none"; 
