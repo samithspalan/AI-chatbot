@@ -34,6 +34,3 @@ An AI-powered chatbot that interacts with users using natural language processin
 ## Contributing
 Feel free to contribute by submitting issues or pull requests.
 
-## License
-This project is open-source and available under the MIT License.
-
